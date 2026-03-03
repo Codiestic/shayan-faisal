@@ -1,0 +1,55 @@
+.aurora-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.aurora-beam {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(60px);
+    opacity: 0.5;
+    animation: aurora-move 20s infinite linear;
+}
+
+.beam-1 {
+    animation-duration: 25s;
+    background: radial-gradient(ellipse at center, rgba(200, 255, 200, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
+    transform: rotate(15deg);
+}
+
+.beam-2 {
+    animation-duration: 35s;
+    animation-direction: reverse;
+    background: radial-gradient(ellipse at center, rgba(100, 200, 255, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
+    transform: rotate(-20deg);
+}
+
+.beam-3 {
+    animation-duration: 45s;
+    background: radial-gradient(ellipse at center, rgba(255, 100, 200, 0.03) 0%, rgba(0, 0, 0, 0) 60%);
+    transform: rotate(45deg);
+}
+
+@keyframes aurora-move {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
